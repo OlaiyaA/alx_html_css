@@ -8,6 +8,7 @@ body {
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
   flex-direction: column;
+  padding: 0;
   margin: 0; /* optional: remove default body margin */
   height: 100vh; /* ensures it fills the viewport */
   width: 100vw; /* ensures it fills the viewport */
@@ -59,13 +60,22 @@ body {
   height: 1093px;
 }
 .container {
-  width: 100%;
+  max-width: 100%;
   padding: 0 100px;
   display: flex;
   flex-direction: row;
   margin: auto;
+  padding: 0 48px;
   justify-content: space-between;
+  align-items: center; /* vertically center items */
+  justify-items: center; /* horizontally center items */
 }
+
+.container img{
+  height: 40px;
+  width: auto;
+}
+
 
 .col1 {
   display: flex;
@@ -126,9 +136,10 @@ nav > ul {
 
 }
 
+
 .logo img{
   width: auto;
-  height: 30px;
+  height: 40px;
 }
 /* Main is also a flex container in row layout */
 main {
@@ -169,12 +180,13 @@ button {
 .pros-section h2 {
   font-size: 2rem;
   margin-bottom: 50px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .pros-section h2 span {
   color: #C271FF; /* purple highlight */
   font-weight: bold;
+
 }
 
 /* Grid Layout */
@@ -269,11 +281,13 @@ button {
 
 .popular-tutorials h2 {
     font-size: 28px;
+    font-weight: 300;
     margin-bottom: 30px;
   }
 
 .popular-tutorials h2 span {
     color: #C271FF; /* purple highlight */
+    font-weight: bold;
   }
 
 .card-container {
@@ -320,7 +334,7 @@ button {
     }
 
     .card-content {
-      padding: 8px 16px;
+      padding: 0px 16px 0px 16px;
     }
 
     .card h3 {
@@ -362,7 +376,6 @@ button {
     .rating {
       color: #D8D8D8;
       font-size: 14px;
-      margin-bottom: 0px;
       display: flex;
     }
 
@@ -374,6 +387,8 @@ button {
 /*Membership Section*/
 .membership-section {
       text-align: center;
+      display: block;
+      justify-items: center;
       padding: 60px 20px;
       background-color: #071629;
       color: #fff;
@@ -382,18 +397,19 @@ button {
     .membership-section h2 {
       font-size: 32px;
       margin-bottom: 50px;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     .membership-section h2 span {
       color: #a855f7; /* purple */
-      font-weight: 600;
+      font-weight: bold;
     }
 
     .features {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 30px;
+      max-width: 1100px;
       margin-bottom: 50px;
     }
 
@@ -447,3 +463,74 @@ button {
         grid-template-columns: 1fr;
       }
     }
+
+
+/* FAQ Section */
+.faqs {
+  max-width: 1100px;
+  margin: 40px auto 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faqs h2 {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 74px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 74px 37px;
+}
+
+.faq-item {
+  background: #fff;
+  text-align: left;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+.faq-item h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+  opacity: 0.5;
+}
+
+/* Responsive Layout */
+@media (max-width: 800px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #071629;
+  color: #fff;
+  text-align: center;
+  padding: 90px 0px;
+  font-size: 14px;
+}
+
+footer p {
+  margin-top: 74px;
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.social-icons{
+  display: flex;
+  gap: 20px;
+  font-size: 32px;
+  color: #fff;
+}
+
